@@ -1,0 +1,54 @@
+{
+    "name": "kakademon/orchid-sortable",
+    "description": "Table drag-and-drop reorder",
+    "keywords": [
+        "kakademon",
+        "orchid-sortable"
+    ],
+    "homepage": "https://github.com/kakademon/orchid-sortable",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "KakaDemon",
+            "email": "kakademon@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kakademon\\OrchidSortable\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kakademon\\OrchidSortable\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kakademon\\OrchidSortable\\OrchidSortableServiceProvider"
+            ],
+            "aliases": {
+                "OrchidSortable": "Kakademon\\OrchidSortable\\OrchidSortableFacade"
+            }
+        }
+    }
+}
